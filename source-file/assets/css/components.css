@@ -1,0 +1,1107 @@
+/* ===== COMPONENTS ANIMATIONS & RESPONSIVE ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header animations */
+.brand {
+    animation: slideDown 0.5s ease-out;
+}
+
+header {
+    animation: slideDown 0.5s ease-out 0.1s backwards;
+}
+
+.sidebar {
+    animation: slideInLeft 0.5s ease-out 0.2s backwards;
+}
+
+.rightbar {
+    animation: slideInRight 0.5s ease-out 0.2s backwards;
+}
+
+footer {
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Keyframe animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0.3;
+    }
+}
+
+/* Menu item animations */
+.nav-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-menu-item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--bs-primary);
+    border-radius: 0 3px 3px 0;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+    color: var(--bs-primary);
+}
+
+.nav-menu-item:hover:before {
+    transform: scaleY(1);
+}
+
+.nav-menu-item.active {
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--bs-primary);
+    font-weight: 500;
+}
+
+.nav-menu-item.active:before {
+    transform: scaleY(1);
+}
+
+/* Notification blink */
+.animation-blink {
+    animation: blink 1.5s infinite;
+}
+
+/* Footer animations */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--bs-primary) !important;
+}
+
+#scrollTopBtn {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* Dropdown animations */
+.dropdown-menu {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 991px) {
+    .brand {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 767px) {
+    .brand {
+        padding: 0.5rem 0.75rem;
+    }
+
+    header {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .nav-menu-item {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 2rem 0.75rem;
+    }
+
+    .footer > div {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .brand {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    header .header-menu {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .nav-menu-item {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 1.5rem 0.5rem;
+    }
+}
+
+/* Custom scrollbar */
+.custom_scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth transitions */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   2. GENERAL LAYOUT
+   ============================================ */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.page-footer {
+    margin-top: auto;
+}
+
+/* ============================================
+   3. HEADER STYLES
+   ============================================ */
+.brand {
+    background: var(--bs-body-bg);
+    border-bottom: 1px solid var(--bs-border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.brand-icon:hover {
+    background: var(--bs-tertiary-bg);
+    transform: translateX(5px);
+}
+
+.brand-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    color: var(--bs-body-color);
+}
+
+.logo-link {
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.sidebar-toggle {
+    animation: fadeIn 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: var(--bs-secondary-bg) !important;
+}
+
+/* ============================================
+   4. HEADER MAIN - Navigation
+   ============================================ */
+.header-main {
+    background: var(--bs-body-bg);
+    border-bottom: 1px solid var(--bs-border-color);
+    animation: slideDown 0.5s ease-out 0.1s backwards;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu .nav-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.header-menu .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.header-menu .dropdown-toggle:hover {
+    background: var(--bs-secondary-bg);
+    color: var(--bs-primary);
+}
+
+.header-menu .dropdown-toggle::after {
+    display: none;
+}
+
+/* ============================================
+   5. NOTIFICATION & MESSAGE STYLES
+   ============================================ */
+.bullet-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.animation-blink {
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0.3;
+    }
+}
+
+.notification {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+}
+
+.notification-item:hover {
+    background: var(--bs-secondary-bg);
+    transform: translateX(5px);
+}
+
+.badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.4rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ============================================
+   6. USER PROFILE DROPDOWN
+   ============================================ */
+.user-menu-toggle {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.user-menu-toggle:hover {
+    background: var(--bs-secondary-bg);
+}
+
+.avatar {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.user-dropdown .dropdown-item {
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+}
+
+.user-dropdown .dropdown-item:hover {
+    background: var(--bs-secondary-bg);
+    transform: translateX(5px);
+    color: var(--bs-primary);
+}
+
+.logout-btn {
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* ============================================
+   7. SIDEBAR STYLES
+   ============================================ */
+.sidebar {
+    height: 100%;
+    animation: slideInLeft 0.5s ease-out 0.2s backwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar-offcanvas {
+    animation: slideInLeft 0.4s ease-out;
+}
+
+.sidebar-body {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.workspace-title {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.workspace-title h6 {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--bs-secondary-color);
+}
+
+.workspace-title i {
+    font-size: 1.1rem;
+    color: var(--bs-primary);
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-list li {
+    animation: slideInLeft 0.5s ease-out backwards;
+}
+
+.menu-list li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.menu-list li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menu-list li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.menu-list li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    color: var(--bs-body-color);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--bs-primary);
+    transform: translateX(-4px);
+    transition: transform 0.3s ease;
+}
+
+.menu-link:hover {
+    background: var(--bs-secondary-bg);
+    color: var(--bs-primary);
+    transform: translateX(5px);
+}
+
+.menu-link:hover::before {
+    transform: translateX(0);
+}
+
+.menu-link i {
+    font-size: 1.1rem;
+    min-width: 24px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover i {
+    transform: scale(1.2);
+}
+
+.menu-link span {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   8. RIGHT SIDEBAR
+   ============================================ */
+.rightbar {
+    height: 100%;
+    animation: slideInRight 0.5s ease-out 0.2s backwards;
+}
+
+.quick-link {
+    transition: all 0.3s ease;
+    color: var(--bs-body-color);
+    text-decoration: none;
+}
+
+.quick-link:hover {
+    background: var(--bs-secondary-bg);
+    color: var(--bs-primary);
+    transform: translateX(5px);
+}
+
+.quick-link i {
+    font-size: 1.2rem;
+    min-width: 30px;
+}
+
+/* ============================================
+   9. FOOTER STYLES
+   ============================================ */
+.page-footer {
+    background: var(--bs-secondary-bg);
+    border-top: 1px solid var(--bs-border-color);
+    margin-top: 3rem;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-content {
+    animation: fadeIn 0.7s ease-out;
+}
+
+.footer-section {
+    animation: slideUp 0.5s ease-out backwards;
+}
+
+.footer-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.footer-section:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.footer-logo {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--bs-primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--bs-body-color);
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--bs-primary);
+    border-radius: 1.5px;
+    animation: expandWidth 0.5s ease-out;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30px;
+    }
+}
+
+.footer-link {
+    color: var(--bs-secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-link::before {
+    content: '→';
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--bs-primary);
+    padding-left: 15px;
+}
+
+.footer-link:hover::before {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background: var(--bs-body-bg);
+    border-top: 1px solid var(--bs-border-color);
+    animation: slideUp 0.5s ease-out 0.5s backwards;
+}
+
+.scroll-to-top-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease-out;
+}
+
+.scroll-to-top-btn:hover {
+    background: var(--bs-primary-rgb);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   10. RESPONSIVE DESIGN
+   ============================================ */
+
+/* Extra Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .sidebar {
+        min-height: calc(100vh - 200px);
+    }
+    
+    .header-menu {
+        justify-content: flex-start;
+    }
+}
+
+/* Large Screens (992px to 1199px) */
+@media (max-width: 1199px) {
+    .brand-text {
+        display: none !important;
+    }
+    
+    .brand-icon {
+        margin: 0;
+    }
+}
+
+/* Medium Screens (768px to 991px) */
+@media (max-width: 991px) {
+    .header-menu .d-none.d-md-inline-flex {
+        display: none !important;
+    }
+    
+    .sidebar {
+        position: relative;
+    }
+    
+    .sidebar-offcanvas {
+        width: 250px;
+    }
+}
+
+/* Small Screens (576px to 767px) */
+@media (max-width: 767px) {
+    .brand {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .px-md-4 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .header-main {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .header-menu {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .user-name {
+        display: none !important;
+    }
+    
+    .footer-content {
+        row-gap: 2rem;
+    }
+    
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom .text-md-end {
+        text-align: center !important;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+}
+
+/* Extra Small Screens (below 576px) */
+@media (max-width: 575px) {
+    .brand {
+        padding: 0.5rem !important;
+    }
+    
+    .header-main {
+        padding: 0.5rem !important;
+    }
+    
+    .sidebar-offcanvas {
+        width: 100%;
+    }
+    
+    .user-dropdown {
+        right: -15px !important;
+        left: auto !important;
+    }
+    
+    .header-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .notification {
+        min-width: 280px;
+    }
+    
+    .footer-content {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-title {
+        font-size: 0.85rem;
+    }
+    
+    .footer-link {
+        font-size: 0.85rem;
+    }
+    
+    .scroll-to-top-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   11. ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* ============================================
+   12. UTILITY ANIMATIONS
+   ============================================ */
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-shake {
+    animation: shake 0.5s;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+.animate-slide-down {
+    animation: slideDown 0.5s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* ============================================
+   13. CUSTOM SCROLLBAR
+   ============================================ */
+
+.custom_scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom_scroll::-webkit-scrollbar-track {
+    background: var(--bs-secondary-bg);
+    border-radius: 10px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 10px;
+}
+
+.custom_scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--bs-primary-rgb);
+}
+
+/* Firefox */
+.custom_scroll {
+    scrollbar-color: var(--bs-primary) var(--bs-secondary-bg);
+    scrollbar-width: thin;
+}
+
+/* ============================================
+   14. DARK MODE SUPPORT
+   ============================================ */
+
+[data-bs-theme="dark"] .brand,
+[data-bs-theme="dark"] .header-main,
+[data-bs-theme="dark"] .sidebar,
+[data-bs-theme="dark"] .page-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .menu-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .social-link {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .social-link:hover {
+    background: var(--bs-primary);
+    color: white;
+}
+
+/* ============================================
+   15. PRINT STYLES
+   ============================================ */
+
+@media print {
+    .brand,
+    .header-main,
+    .sidebar,
+    .rightbar,
+    .page-footer {
+        display: none;
+    }
+    
+    main {
+        flex: none;
+    }
+}
+
+/* ============================================
+   16. TRANSITIONS RESET
+   ============================================ */
+
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

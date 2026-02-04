@@ -1,297 +1,114 @@
-# Networsys Project Management - React Application
+# [Networsys Technology ⚡️](https://horizon-ui.com/horizon-ui-chakra) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://horizon-ui.com/&text=Check%20Horizon%20UI,%20the%20trendiest%20open-source%20admin%20template%20for%20Chakra%20UI%20&%20React!)
 
-A modern, fully-functional project management dashboard built with React, Bootstrap, and best practices. This application provides comprehensive project and task management capabilities with a clean, responsive UI.
+![version](https://img.shields.io/badge/version-3.0.0-brightgreen.svg)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![GitHub issues open](https://img.shields.io/github/issues/horizon-ui/horizon-ui-chakra.svg?maxAge=2592000)](https://github.com/horizon-ui/horizon-ui-chakra/issues?q=is%3Aopen+is%3Aissue)
 
-## 🚀 Features
+<p>&nbsp;</p>
 
-- **Authentication System**
-  - Sign In with email/password
-  - User registration with validation
-  - Password reset functionality
-  - Remember device option
+[<img alt="Networsys Technology" src="https://i.ibb.co/fdyTwz1/introduction-image-2.png" /> ](https://github.com/horizon-ui/horizon-ui-chakra)
 
-- **Dashboard**
-  - Overview of projects and tasks
-  - Project statistics
-  - Quick access to important features
+<p>&nbsp;</p>
 
-- **Project Management**
-  - Create and manage projects
-  - Track project progress
-  - Assign team members
-  - View project details
+Get started and build your dream web app with Networsys Technology, the most trendiest &
+innovative Open Source Admin Template for Chakra UI & React!
 
-- **Task Management**
-  - Create and assign tasks
-  - Set priorities and due dates
-  - Track task status
-  - Task filtering and sorting
+---
 
-- **Team Management**
-  - Manage team members
-  - Assign roles
-  - Track member status
-  - Send invitations
+### Introduction
 
-- **Calendar**
-  - View events and deadlines
-  - Schedule meetings
-  - Track important dates
+Designed for those who like modern UI elements and beautiful websites. Made of
+hundred of elements, designed blocks and fully coded pages, Networsys Technology is ready
+to help you create stunning websites and webapps.
 
-- **Theme System**
-  - Multiple theme options
-  - Light/Dark mode toggle
-  - Customizable UI
-  - Responsive design
+Save hundreds of hours trying to create and develop a dashboard from scratch.
+The fastest, most responsive & trendiest dashboard is here. Seriously.
 
-## 🛠 Tech Stack
+With Networsys Technology you will find many examples for pages like NFTs Pages,
+Authentication Pages, Profile and so on. Just choose between a Basic Design or a
+cover and you are good to go!
 
-- **Frontend Framework:** React 19
-- **Routing:** React Router 7
-- **UI Framework:** Bootstrap 5
-- **Icons:** Font Awesome 7
-- **Build Tool:** Vite
-- **Package Manager:** npm
-- **CSS:** Bootstrap CSS + Custom CSS
+### 🎉 [NEW] Networsys Technology Components
 
-## 📋 Prerequisites
+All the main components from both versions, this will help you to see and interact with all & the latest added components of Horizon (also, new components are on the way, stay tuned)! ⚡️
+<a href="https://horizon-ui.com/components/?ref=readme-horizon" target="_blank">See all components</a>
 
-- Node.js >= 16.x
-- npm >= 8.x
+### Documentation
 
-## 🚦 Quick Start
+Each element is well presented in a very complex documentation. You can read
+more about the <a href="https://horizon-ui.com/documentation/docs/introduction?ref=readme-horizon" target="_blank">documentation
+here.</a>
 
-### 1. Install Dependencies
+### Quick Start
+
+Install Networsys Technology by running either of the following:
+
+- Install NodeJS LTS from
+  [NodeJs Official Page](https://nodejs.org/en/?ref=horizon-documentation)
+  (NOTE: Product only works with LTS version)
+
+Clone the repository with the following command:
+
+```bash
+git clone https://github.com/horizon-ui/horizon-ui-chakra.git
+```
+
+Run in terminal this command:
+
 ```bash
 npm install
 ```
 
-### 2. Start Development Server
-```bash
-npm run dev
-```
-
-The application will open at `http://localhost:5173`
-
-### 3. Build for Production
-```bash
-npm run build
-```
-
-### 4. Preview Production Build
-```bash
-npm run preview
-```
-
-## 📁 Project Structure
-
-```
-src/
-├── components/          # Reusable components
-│   ├── Header.jsx       # App header
-│   ├── Sidebar.jsx      # Navigation sidebar
-│   └── Layout.jsx       # Page layout wrapper
-├── pages/               # Page components
-│   ├── SignIn.jsx
-│   ├── SignUp.jsx
-│   ├── Dashboard.jsx
-│   ├── MyTask.jsx
-│   ├── Team.jsx
-│   ├── Calendar.jsx
-│   └── Project.jsx
-├── contexts/            # React Context
-│   └── ThemeContext.jsx # Global state management
-├── hooks/               # Custom hooks
-│   └── useBootstrapComponents.js
-├── utils/               # Utility functions
-│   └── index.js
-├── styles/              # CSS files
-├── assets/              # Static assets
-├── App.jsx              # Root component
-└── main.jsx             # Entry point
-```
-
-## 🎯 Available Routes
-
-### Authentication
-- `/signin` - Sign In page
-- `/signup` - Sign Up page
-- `/password-reset` - Password Reset page
-
-### Application
-- `/dashboard` - Dashboard overview
-- `/my-task` - Task management
-- `/team` - Team management
-- `/calendar` - Calendar view
-- `/projects` - Projects list
-
-## 📚 Documentation
-
-### Setup Guide
-Detailed setup and development instructions: [SETUP_GUIDE.md](./SETUP_GUIDE.md)
-
-### Migration Guide
-Complete migration documentation from HTML to React: [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md)
-
-## 🚀 Available Scripts
+Then run this command to start your local server
 
 ```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Run ESLint
-npm run lint
+npm start
 ```
 
-## 🔧 Configuration
+### Example Pages
 
-### Environment Variables
-Create a `.env` file for environment-specific variables:
-```env
-VITE_API_URL=http://localhost:3000/api
-VITE_APP_NAME=Networsys Project Management
-```
+If you want to get inspiration or just show something directly to your clients,
+you can jump start your development with our pre-built example pages. You will
+be able to quickly set up the basic structure for your web project. View
+<a href="https://horizon-ui.com/horizon-ui-chakra/?ref=readme-horizon" target="_blank">example
+pages here.</a>
 
-## 📝 Features Implemented
+### Versions
 
-### State Management
-- Theme switching
-- Sidebar toggle
-- Rightbar toggle
-- Monochrome mode
-- Gradient mode
-- Box layout toggle
+| Free Version                                                                                                       | PRO Version                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| [![Networsys Technology](https://i.ibb.co/fdyTwz1/introduction-image-2.png)](https://www.horizon-ui.com/?ref=readme-horizon) | [![Networsys Technology PRO](https://i.ibb.co/R6jFKRM/introduction-image-1.png)](https://www.horizon-ui.com/pro?ref=readme-horizon) |
 
-### Component Features
-- Responsive sidebar navigation
-- User profile dropdown
-- Notification center
-- Theme switcher
-- Mobile-friendly menu
+### Figma Version
 
-### Bootstrap Integration
-- Bootstrap 5 CSS framework
-- Bootstrap JS components
-- Automatic component initialization
-- Responsive grid system
-- Utility classes
+Networsys Technology is available in Figma format as well! Check it out on Figma
+Community! 🎨
+[See the Networsys Technology Figma design files](https://bit.ly/horizon-figma)
 
-## 🎨 Styling
+### Reporting Issues
 
-The application uses:
-- Bootstrap CSS framework for layout and components
-- Custom CSS for component-specific styling
-- CSS variables for theme colors
-- Font Awesome icons for UI elements
+We use GitHub Issues as the official bug tracker for the Networsys Technology. Here are
+some advices for our users that want to report an issue:
 
-### Theme Colors
-- Primary: #5f63f1 (Indigo)
-- Secondary: #868caf (Gray-blue)
-- Success: #50cd89 (Green)
-- Danger: #f1416c (Red)
-- Warning: #ffc107 (Amber)
-- Info: #17a2b8 (Cyan)
-
-## 🔒 Security
-
-- Client-side form validation
-- Secure password handling
-- User session management
-- Protected routes ready for implementation
-- CSRF protection ready
-
-## 📱 Responsive Design
-
-The application is fully responsive and works on:
-- Desktop (1200px and above)
-- Tablet (768px - 1199px)
-- Mobile (up to 767px)
-
-## 🌐 Browser Support
-
-| Browser | Version |
-|---------|---------|
-| Chrome  | Latest 2 |
-| Firefox | Latest 2 |
-| Safari  | Latest 2 |
-| Edge    | Latest 2 |
-
-## 🚀 Deployment
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-1. Connect GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-
-### Traditional Server
-```bash
-npm run build
-# Copy dist/ to your server
-```
-
-## 🐛 Troubleshooting
-
-### Port Already in Use
-The app will automatically try the next available port if 5173 is in use.
-
-### CSS Not Loading
-Ensure all CSS imports are in `src/App.jsx`
-
-### Routes Not Working
-Verify Router configuration in `App.jsx`
-
-### Bootstrap Components Not Initializing
-Call `useBootstrapComponents()` hook in your page component
-
-## 📖 Learning Resources
-
-- [React Documentation](https://react.dev)
-- [React Router Documentation](https://reactrouter.com)
-- [Bootstrap Documentation](https://getbootstrap.com)
-- [Vite Documentation](https://vitejs.dev)
-
-## 🤝 Contributing
-
-To contribute to this project:
-1. Create a feature branch
-2. Make your changes
-3. Test thoroughly
-4. Submit a pull request
-
-## 📄 License
-
-This project is private and proprietary to Networsys Technologies LLP.
-
-## 📧 Support
-
-For support and questions:
-- Email: support@networsys.com
-- Documentation: See [SETUP_GUIDE.md](./SETUP_GUIDE.md) and [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md)
-
-## 🎉 Changelog
-
-### Version 1.0.0 (February 2, 2026)
-- Initial React migration from HTML
-- React Router integration
-- Bootstrap 5 integration
-- Theme context implementation
-- Responsive design
-- All original features preserved
+1. Make sure that you are using the latest version of the Networsys Technology Dashbaord.
+   Check the CHANGELOG from your dashboard on our
+   [CHANGE LOG File](https://github.com/horizon-ui/horizon-ui-chakra/blob/main/CHANGELOG.md?ref=readme-horizon).
+2. Providing us reproducible steps for the issue will shorten the time it takes
+   for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you
+   encountered the issue might help.
 
 ---
 
-**Created by:** Networsys Technologies LLP  
-**Last Updated:** February 2, 2026  
-**Version:** 1.0.0
+### Community
+
+Connect with the community! Feel free to ask questions, report issues, and meet
+new people that already use Networsys Technology!
+
+💬 [Join the #HorizonUI Discord Community!](https://discord.gg/f6tEKFBd4m)
+
+### Copyright and license
+
+⭐️ [Copyright 2023 Simmmple ](https://www.simmmple.com/?ref=readme-horizon)
+
+📄 [Networsys Technology License](https://www.simmmple.com/licenses?ref=readme-horizon)

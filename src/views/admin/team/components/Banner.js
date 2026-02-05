@@ -26,8 +26,8 @@ export default function Banner(props) {
         <Avatar
         mx='1rem'
         src={avatar}
-        h='10px'
-        w='10px'
+        h='100px'
+        w='100px'
         border='4px solid'
         borderColor={borderColor}
         borderRadius='5px'
@@ -42,6 +42,7 @@ export default function Banner(props) {
       </Box>
       
       </Flex>
+     
       <Flex w='max-content' mx='auto' mt='26px'>
         <Flex mx='auto' me='60px' align='center' direction='column'>
           <Text color={textColorPrimary} fontSize='2xl' fontWeight='700'>
@@ -68,26 +69,30 @@ export default function Banner(props) {
           </Text>
         </Flex>
       </Flex>
-          <SimpleGrid columns='2' gap='20px'>
+       <SimpleGrid columns='2' gap='20px'>
+         <Information
+          boxShadow={cardShadow}
+          title='Employee code'
+          value='Net-656562'
+        />
+      </SimpleGrid>
+          <SimpleGrid columns='2' gap='20px' mt='20px' mb='20px'>
         <Information
           boxShadow={cardShadow}
           title='Email'
-          value={email}
+          value='example@networsys.com'
         />
         <Information
           boxShadow={cardShadow}
           title='Phone'
-          value={phone}
+          value='+91 87455582'
         />
-        <Information
+      </SimpleGrid>
+      <SimpleGrid>
+         <Information
           boxShadow={cardShadow}
-          title='Department'
-          value='Product Design'
-        />
-        <Information
-          boxShadow={cardShadow}
-          title='Work History'
-          value='Google, Facebook'
+          title='Address'
+          value='House number - 201, Noida Sector 324, Uttar Pradesh, India'
         />
       </SimpleGrid>
     </Card>

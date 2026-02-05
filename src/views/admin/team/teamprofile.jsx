@@ -37,7 +37,7 @@ export default function Overview() {
         />
         <General
           gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
-          minH='365px'
+          // minH='365px'
           pe='20px'
         />
       </Grid>

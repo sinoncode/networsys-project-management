@@ -5,7 +5,6 @@ import {
   Flex,
   Icon,
   Image,
-  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -187,6 +186,7 @@ export default function HeaderLinks(props) {
 
       <Button
         variant="no-hover"
+        border={borderButton}
         bg="transparent"
         p="0px"
         minW="unset"

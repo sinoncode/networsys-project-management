@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, layout } from '@chakra-ui/react';
+import { Icon } from '@chakra-ui/react';
 import {
   MdBarChart,
   MdPerson,
@@ -21,6 +21,7 @@ import RTL from 'views/admin/rtl';
 
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
+import SignUpCentered from 'views/auth/signUp';
 
 const routes = [
   {
@@ -75,6 +76,11 @@ const routes = [
     path: '/sign-in',
     icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
     component: <SignInCentered />,
+  },
+   {
+    layout: '/auth',
+    path: '/sign-up',
+    component: <SignUpCentered />,
   },
   {
     name: 'RTL Admin',

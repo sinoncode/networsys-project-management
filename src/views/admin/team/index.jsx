@@ -1,13 +1,8 @@
 
-import { Box, Grid, Button } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 
 // Custom components
 import Cards from "views/admin/team/components/Cards";
-import General from "views/admin/profile/components/General";
-import Notifications from "views/admin/profile/components/Notifications";
-import Projects from "views/admin/profile/components/Projects";
-import Storage from "views/admin/profile/components/Storage";
-import Upload from "views/admin/profile/components/Upload";
 
 // Assets
 import banner from "assets/img/auth/banner.png";

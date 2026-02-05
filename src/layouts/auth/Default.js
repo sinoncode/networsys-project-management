@@ -48,7 +48,7 @@ function AuthIllustration(props) {
               color='secondaryGray.600'
             />
             <Text ms='0px' fontSize='sm' color='secondaryGray.600'>
-              Back to Simmmple
+              Back to Networsys Technologies
             </Text>
           </Flex>
         </NavLink>
@@ -67,8 +67,9 @@ function AuthIllustration(props) {
             w='100%'
             h='100%'
             bgSize='cover'
-            bgPosition='50%'
+            bgPosition='40%'
             position='absolute'
+            bgRepeat='no-repeat'
             borderBottomLeftRadius={{ lg: "120px", xl: "200px" }}></Flex>
         </Box>
         <Footer />

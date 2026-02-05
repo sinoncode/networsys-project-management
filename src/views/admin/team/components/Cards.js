@@ -1,5 +1,5 @@
 // Chakra imports
-import { Avatar, Box, Flex, Text, Icon, Button, useColorModeValue } from "@chakra-ui/react";
+import { Avatar, Flex, Text, Icon, Button, useColorModeValue } from "@chakra-ui/react";
 import Card from "components/card/Card.js";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import React from "react";
@@ -17,7 +17,7 @@ import {
 import { FiMoreHorizontal } from "react-icons/fi";
 import { Link } from "react-router-dom";
 export default function Banner(props) {
-  const { banner, avatar, name, job, phone, email, techIcons = [] } = props;
+  const { avatar, name, job, phone, email, techIcons = [] } = props;
 const techIconMap = {
     php: SiPhp,
   laravel: SiLaravel,

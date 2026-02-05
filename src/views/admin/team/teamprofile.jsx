@@ -4,7 +4,6 @@ import { Box, Grid } from "@chakra-ui/react";
 // Custom components
 import Banner from "views/admin/team/components/Banner";
 import General from "views/admin/team/components/General";
-import Notifications from "views/admin/team/components/Notifications";
 import Projects from "views/admin/team/components/Projects";
 
 // Assets
@@ -44,10 +43,11 @@ export default function Overview() {
       </Grid>
       <Grid
         mb='20px'
+        mt='2rem'
         templateColumns={{
           base: "1fr",
-          lg: "repeat(2, 1fr)",
-          "2xl": "1.34fr 1.62fr 1fr",
+          lg: "repeat(1, 1fr)",
+          "2xl": "1fr",
         }}
         templateRows={{
           base: "1fr",
@@ -56,6 +56,7 @@ export default function Overview() {
         }}
         gap={{ base: "20px", xl: "20px" }}>
         <Projects
+          mt='2rem'
           gridArea='1 / 2 / 2 / 2'
           banner={banner}
           avatar={avatar}
@@ -65,11 +66,7 @@ export default function Overview() {
           followers='9.7k'
           following='274'
         />
-        <General
-          gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
-          minH='365px'
-          pe='20px'
-        />
+      
        
       </Grid>
     </Box>

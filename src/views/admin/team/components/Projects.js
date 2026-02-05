@@ -7,7 +7,7 @@ import Project3 from "assets/img/profile/Project3.png";
 // Custom components
 import Card from "components/card/Card.js";
 import React from "react";
-import Project from "views/admin/profile/components/Project";
+import Project from "views/admin/team/components/Project";
 
 export default function Projects(props) {
   // Chakra Color Mode
@@ -38,6 +38,7 @@ export default function Projects(props) {
         ranking='1'
         link='#'
         title='Technology behind the Blockchain'
+        description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
       />
       <Project
         boxShadow={cardShadow}
@@ -46,6 +47,7 @@ export default function Projects(props) {
         ranking='2'
         link='#'
         title='Greatest way to a good Economy'
+        description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
       />
       <Project
         boxShadow={cardShadow}
@@ -53,6 +55,7 @@ export default function Projects(props) {
         ranking='3'
         link='#'
         title='Most essential tips for Burnout'
+        description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
       />
     </Card>
   );

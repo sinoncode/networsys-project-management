@@ -15,7 +15,7 @@ import React from "react";
 import { MdEdit } from "react-icons/md";
 
 export default function Project(props) {
-  const { title, ranking, link, image, ...rest } = props;
+  const { title, description, ranking, link, image, ...rest } = props;
   // Chakra Color Mode
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
   const textColorSecondary = "gray.400";
@@ -33,6 +33,13 @@ export default function Project(props) {
             mb='4px'>
             {title}
           </Text>
+           <Text
+            color={textColorPrimary}
+            fontWeight='400'
+            fontSize='sm'
+            mb='4px'>
+            {description}
+          </Text>
           <Text
             fontWeight='500'
             color={textColorSecondary}
@@ -45,13 +52,14 @@ export default function Project(props) {
           </Text>
         </Box>
         <Link
-          href={link}
-          variant='no-hover'
-          me='16px'
-          ms='auto'
-          p='0px !important'>
-          <Icon as={MdEdit} color='secondaryGray.500' h='18px' w='18px' />
-        </Link>
+  href={link}
+  ml="16px"
+  mr="auto"
+  p="0"
+>
+  <Icon as={MdEdit} h="25px" w="25px" color="secondaryGray.500" _hover={{ color: "blue.500" }} />
+</Link>
+
       </Flex>
     </Card>
   );

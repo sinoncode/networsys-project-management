@@ -18,6 +18,7 @@ import Team from 'views/admin/team';
 import TeamProfile from 'views/admin/team/teamprofile.jsx'
 import DataTables from 'views/admin/dataTables';
 import RTL from 'views/admin/rtl';
+import Projects from 'views/admin/projects'
 
 // Auth Imports
 import SignInCentered from 'views/auth/signIn';
@@ -45,6 +46,7 @@ const routes = [
     ),
     component: <NFTMarketplace />,
     secondary: true,
+    hidden: true,
   },
   {
     name: 'Data Tables',
@@ -52,6 +54,15 @@ const routes = [
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     path: '/data-tables',
     component: <DataTables />,
+    hidden: true,
+  },
+
+    {
+    name: 'Projects',
+    layout: '/admin',
+    icon: <Icon as={MdPeople} width="20px" height="20px" color="inherit" />,
+    path: '/projects',
+    component: <Projects />,
   },
 
     {
@@ -69,6 +80,7 @@ const routes = [
     path: '/profile',
     icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
     component: <Profile />,
+    hidden: true,
   },
   {
     name: 'Sign In',
@@ -76,11 +88,13 @@ const routes = [
     path: '/sign-in',
     icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
     component: <SignInCentered />,
+    hidden: true,
   },
    {
     layout: '/auth',
     path: '/sign-up',
     component: <SignUpCentered />,
+    hidden: true,
   },
   {
     name: 'RTL Admin',
@@ -88,6 +102,7 @@ const routes = [
     path: '/rtl-default',
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
     component: <RTL />,
+    hidden: true,
   },
 
   {
